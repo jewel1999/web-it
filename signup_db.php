@@ -47,7 +47,7 @@
                 $row = $check_email->fetch(PDO::FETCH_ASSOC);
 
                 if($row['email']== $email){
-                    $_SESSION['warning'] = "มีอีเมลล์นีอยู่ในระบบแล้ว <a href='indsex.php'>click here </a>";
+                    $_SESSION['warning'] = "มีอีเมลล์นีอยู่ในระบบแล้ว <a href='index.php'>click here </a>";
                     header("location:signup.php");
                 }else if(!isset($_SESSION['error'])){
                     $passwordHash = password_hash($password,PASSWORD_DEFAULT);
