@@ -41,16 +41,16 @@
                                 }
                             }else{
                                 $_SESSION['error']='Invalid  password';
-                                header("location: login.php");
+                                header("location: index.php");
                             }
                         }else{
                             $_SESSION['error']='Invalid  email';
-                            header("location:login.php");
+                            header("location:index.php");
                         }
 
                 } else {
                     $_SESSION['error']= ' ไม่มีข้อมุลในระบบ ';
-                    header("location : login.php");
+                    header("location : index.php");
                 }
 
 

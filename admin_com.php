@@ -2,6 +2,18 @@
     session_start();
     require_once 'connect_db.php';
 
+    if(isset($_GET['delete'])){
+        $delete_id = $_GET['delete'];
+        $deletestmt = $conn->query("DELETE FROM computers WHERE id = $delete_id");
+        $deletestmt->execute();
+
+        if($deletestmt){
+            echo"<script> alert('data hasbeen deleted successfully ');  </script>";
+            $_SESSION['success']="data has been deleted sccessfully";
+            header("refresh:1; url=admin_com.php");
+        }
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,8 +81,6 @@
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#UserModal">Insert computer </button>
             </div>
 
-            
-
         </div>
         <hr>
         <br>
@@ -123,9 +133,9 @@
                 <td><?php echo $computers['com_status']; ?> </td>
                 <td><?php echo $computers['create_at']; ?>  </td>       
                 <td> 
-                      
-                     <a href="edit_com.php?id=<?= $computers['id']; ?>"  class="btn btn-warning" >Edit</a>
-                     <a href="delete.php?id=<?= $computers['id']; ?>"  class="btn btn-danger" onclick="return confirm('are you sure to delete ?')" >Delete</a>
+                    
+                     <a href="edit_com.php?id=<?= $computers['id']; ?>"  class="btn btn-warning">Edit</a>
+                     <a href="?delete=<?= $computers['id']; ?>"  class="btn btn-danger" onclick="return confirm('are you sure to delete ?')" >Delete</a>
                 </td>    
             </tr>
         <?php }} ?>   
