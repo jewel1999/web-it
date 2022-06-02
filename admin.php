@@ -41,7 +41,7 @@
                   Home
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Employee information</a></li>
+                    <li><a class="dropdown-item" href="admin_emp.php">Employee information</a></li>
                     <li><a class="dropdown-item" href="admin_com.php">Computer information</a></li>
                     <li><a class="dropdown-item" href="#">Printer  information</a></li>
                     <li><a class="dropdown-item" href="#">Repair Notics</a></li>

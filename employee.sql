@@ -1,5 +1,6 @@
 CREATE TABLE users ( 
-id int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY, employee_id int(10) NOT NULL, 
+id int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+employee_id int(10) NOT NULL, 
 fnameth varchar(255) NOT NULL, 
 lnameth varchar(255) NOT NULL, 
 fnameeng varchar(255) NOT NULL, 

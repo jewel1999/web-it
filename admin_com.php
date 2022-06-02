@@ -70,7 +70,7 @@
     
     <div class="container mt-3">
     <div class="md-4  d-flex ">
-                <button href="admin.php" type="button" class="btn btn-dark" > back</button>
+                <a href="admin.php" type="button" class="btn btn-dark" > back</a >
             </div>
             <br>
         <div class="row">
